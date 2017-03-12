@@ -1,6 +1,22 @@
-# Ignore anything built
+# eclipse
+bin
+*.launch
+.settings
+.metadata
+.classpath
+.project
+
+# idea
+out
+*.ipr
+*.iws
+*.iml
+.idea
+
+# gradle
 build
+.gradle
 
-# And also jarfiles
-*.jar
-
+# other
+eclipse
+run
