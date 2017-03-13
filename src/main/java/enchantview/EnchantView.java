@@ -120,7 +120,8 @@ public class EnchantView {
             ContainerEnchantment container = (ContainerEnchantment) containerToSend;
 
             if (Config.transientEnchantment) {
-               container.xpSeed = rand.nextInt();
+               player.removeExperienceLevel(0); // update xpSeed
+               container.xpSeed = player.getXPSeed();
                container.detectAndSendChanges();
             }
 
