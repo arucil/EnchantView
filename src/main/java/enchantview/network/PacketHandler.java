@@ -6,11 +6,11 @@ import net.minecraftforge.fml.common.network.simpleimpl.SimpleNetworkWrapper;
 import net.minecraftforge.fml.relauncher.Side;
 
 public class PacketHandler {
-   public static SimpleNetworkWrapper instance;
+    public static SimpleNetworkWrapper instance;
 
-   public static void init() {
-      instance = NetworkRegistry.INSTANCE.newSimpleChannel(EnchantView.ID);
+    public static void init() {
+        instance = NetworkRegistry.INSTANCE.newSimpleChannel(EnchantView.ID);
 
-      instance.registerMessage(MessageEnchant.Handler.class, MessageEnchant.class, 0, Side.CLIENT);
-   }
+        instance.registerMessage(MessageEnchant.Handler.class, MessageEnchant.class, 0, Side.CLIENT);
+    }
 }
