@@ -1,7 +1,9 @@
 buildscript {
     repositories {
-        jcenter()
-        maven { url = "http://files.minecraftforge.net/maven" }
+        maven { url 'http://maven.aliyun.com/nexus/content/groups/public/' }
+        maven{ name = 'jcenter'
+        url=  'http://maven.aliyun.com/nexus/content/repositories/jcenter'}
+        maven { url = "https://lss233.com/artifactory/minecraft" }
     }
     dependencies {
         classpath 'net.minecraftforge.gradle:ForgeGradle:2.3-SNAPSHOT'
@@ -21,7 +23,7 @@ compileJava {
 }
 
 minecraft {
-    version = "1.12.2-14.23.2.2611"
+    version = "1.12.2-14.23.5.2847"
     runDir = "run"
     
     // the mappings can be changed at any time, and must be in the following format.
